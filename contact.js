@@ -1,8 +1,6 @@
-// contact.js
-// the contact form + the FAQ accordion at the bottom
+// contact.js - the contact form + the FAQ accordion
 
 
-// same email checker as the other pages
 function validEmail(e) {
     var at = e.indexOf("@");
     var dot = e.lastIndexOf(".");
@@ -15,7 +13,6 @@ function validEmail(e) {
 
 function clearContactErrors() {
     var ids = ["ContactName", "ContactEmail", "ContactSubject", "ContactMessage"];
-
     for (var i = 0; i < ids.length; i++) {
         document.getElementById("error" + ids[i]).className = "error-text";
         document.getElementById("contact" + ids[i].substring(7)).className = "";
@@ -24,11 +21,8 @@ function clearContactErrors() {
 
 
 function submitContact() {
-
     clearContactErrors();
 
-    // get the values
-    // .trim() so spaces dont count as actual input
     var name = document.getElementById("contactName").value.trim();
     var email = document.getElementById("contactEmail").value.trim();
     var subject = document.getElementById("contactSubject").value.trim();
@@ -41,20 +35,16 @@ function submitContact() {
         document.getElementById("contactName").className = "input-error";
         fail = true;
     }
-
     if (email == "" || !validEmail(email)) {
         document.getElementById("errorContactEmail").className = "error-text show";
         document.getElementById("contactEmail").className = "input-error";
         fail = true;
     }
-
     if (subject == "") {
         document.getElementById("errorContactSubject").className = "error-text show";
         document.getElementById("contactSubject").className = "input-error";
         fail = true;
     }
-
-    // message must be a proper message not just "hi"
     if (msg.length < 10) {
         document.getElementById("errorContactMessage").className = "error-text show";
         document.getElementById("contactMessage").className = "input-error";
@@ -65,10 +55,8 @@ function submitContact() {
         return;
     }
 
-    // worked - show success
     document.getElementById("contactSuccess").style.display = "block";
 
-    // clear the form
     document.getElementById("contactName").value = "";
     document.getElementById("contactEmail").value = "";
     document.getElementById("contactSubject").value = "";
@@ -80,11 +68,7 @@ function submitContact() {
 
 // opens or closes a FAQ when you click the question
 function toggleFaq(question) {
-
-    // the answer is the element right after the question button
     var answer = question.nextElementSibling;
-
-    // if its showing, hide it. if its hidden, show it
     if (answer.style.display == "block") {
         answer.style.display = "none";
     }
