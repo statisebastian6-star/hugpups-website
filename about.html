@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>About HugPups</h1>
+  <p>Dedicated to improving lives through the power of therapy dogs</p>
+</section>
+
+
+<!-- our mission section -->
+<section class="mission">
+  <div class="mission-icon"><i data-lucide="paw-print"></i></div>
+  <h2>Our Mission</h2>
+  <p>HugPups is a start-up therapy dog service. Our goal is to help people who are struggling with their mental health by connecting them with trained companion dogs. We believe everyone deserves the comfort that animals bring - even if they don't have the resources to own one themselves.</p>
+  <p>Our service isn't a substitute for therapy - it's an addition to it. We help people living with anxiety and depression to ease their symptoms, and give people experience with animals so they can hopefully own a pet of their own one day.</p>
+</section>
+
+
+<!-- our values -->
+<section class="section-green">
+  <h2 class="section-title">Our Values</h2>
+
+  <div class="grid-3">
+
+    <div class="card value-card">
+      <div class="icon-circle"><i data-lucide="heart"></i></div>
+      <h3>Compassion</h3>
+      <p>We approach every interaction with empathy and care, both for our clients and our dogs.</p>
+    </div>
+
+    <div class="card value-card">
+      <div class="icon-circle"><i data-lucide="star"></i></div>
+      <h3>Excellence</h3>
+      <p>Our therapy dogs meet the highest standards of training, certification and animal welfare.</p>
+    </div>
+
+    <div class="card value-card">
+      <div class="icon-circle"><i data-lucide="globe"></i></div>
+      <h3>Accessibility</h3>
+      <p>We strive to make therapy dog companionship available to anyone who could benefit from it.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- meet the team - 4 across -->
+<section class="section">
+  <h2 class="section-title">Meet Our Team</h2>
+  <p class="section-subtitle">Our certified handlers and trainers are passionate about mental health and animal welfare.</p>
+
+  <div class="grid-4">
+
+    <div class="card team-card">
+      <img src="assets/team-sarah.jpg" alt="Sarah Johnson">
+      <div class="team-card-body">
+        <h3>Sarah Johnson</h3>
+        <div class="role">Founder &amp; Lead Handler</div>
+        <p>Certified therapy dog handler with 10+ years of experience and a degree in animal behaviour.</p>
+      </div>
+    </div>
+
+    <div class="card team-card">
+      <img src="assets/team-david.jpg" alt="David Thompson">
+      <div class="team-card-body">
+        <h3>David Thompson</h3>
+        <div class="role">Senior Handler</div>
+        <p>Specialises in elderly care and hospice work. Background in mental health support.</p>
+      </div>
+    </div>
+
+    <div class="card team-card">
+      <img src="assets/team-emily.jpg" alt="Emily Rodriguez">
+      <div class="team-card-body">
+        <h3>Emily Rodriguez</h3>
+        <div class="role">Training Coordinator</div>
+        <p>Expert in canine behaviour and therapy dog certification. Qualified veterinary nurse.</p>
+      </div>
+    </div>
+
+    <div class="card team-card">
+      <img src="assets/team-michael.jpg" alt="Michael Chen">
+      <div class="team-card-body">
+        <h3>Michael Chen</h3>
+        <div class="role">Wellbeing Specialist</div>
+        <p>Specialises in pediatric therapy and has a background in child psychology.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<script src="nav.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

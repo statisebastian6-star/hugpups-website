@@ -1,0 +1,564 @@
+/*
+   style.css
+   shared styles - used by every page
+
+   colour palette i picked from the brand colour #548235:
+   - main green   #548235  buttons, banners, footer
+   - hover green  #6ba142  lighter for hover effects
+   - dark green   #3d6126  used in the CTA section
+   - bg green     #e8f0e0  light tint for some sections
+   - border       #d4e2c6  for card borders + input borders
+   - text dark    #2c2c2c  headings
+   - text grey    #555555  paragraphs
+   - text light   #888888  small labels
+*/
+
+
+/* reset - get rid of all default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #2c2c2c;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* all the headings use Playfair Display for a fancier feel */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.25;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ====== top bar / navigation ====== */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d4e2c6;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto; /* pushes the links to the right */
+}
+
+.nav-logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.nav-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #548235;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-links a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555555;
+    padding: 6px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    background-color: #e8f0e0;
+    color: #548235;
+}
+
+.nav-links a.active {
+    background-color: #548235;
+    color: #ffffff;
+}
+
+/* burger button - only shows on mobile */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #548235;
+    padding: 8px;
+}
+
+
+/* ====== green page banner (the top of every inner page) ====== */
+.page-hero {
+    background-color: #548235;
+    color: #ffffff;
+    text-align: center;
+    padding: 56px 32px;
+}
+
+.page-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1rem;
+}
+
+
+/* ====== buttons ====== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* filled green button */
+.btn-green {
+    background-color: #548235;
+    color: #ffffff;
+    border-color: #548235;
+}
+.btn-green:hover {
+    background-color: #6ba142;
+    border-color: #6ba142;
+}
+
+/* outline button for the green banners */
+.btn-white {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.btn-white:hover {
+    background-color: #ffffff;
+    color: #548235;
+}
+
+
+/* ====== sections ====== */
+.section {
+    padding: 60px 32px;
+}
+
+/* same as .section but with a green tinted background */
+.section-green {
+    padding: 60px 32px;
+    background-color: #e8f0e0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #555555;
+    font-size: 0.95rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+}
+
+
+/* ====== card (a white box with rounded corners + shadow) ====== */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #d4e2c6;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(84, 130, 53, 0.08);
+}
+
+
+/* ====== icon circles ====== */
+/* small green circle with a lucide icon inside - reused everywhere */
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #e8f0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    color: #548235;
+}
+
+.icon-circle svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+}
+
+
+/* ====== grid layouts ====== */
+/* using css grid which is super handy for cards in columns */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* like grid-2 but the right side is a tiny bit bigger */
+.grid-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 56px;
+    max-width: 1060px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+
+/* ====== forms ====== */
+.form-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 36px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(84, 130, 53, 0.08);
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 6px;
+    margin-top: 18px;
+}
+
+/* every input/select/textarea gets the same look */
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #d4e2c6;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.92rem;
+    color: #2c2c2c;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #548235;
+    outline: none;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* turns the border red when the user messes up */
+.input-error {
+    border-color: #d9534f;
+    background-color: #fdf2f2;
+}
+
+/* the little red text under a broken field */
+.error-text {
+    color: #d9534f;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none;
+}
+.error-text.show {
+    display: block;
+}
+
+/* big green submit button at the end of forms */
+.submit-btn {
+    background-color: #548235;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+.submit-btn:hover {
+    background-color: #6ba142;
+}
+
+/* green confirmation box - hidden until they actually submit */
+.success-message {
+    display: none;
+    background-color: #e8f0e0;
+    color: #548235;
+    border: 1px solid #548235;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+
+/* ====== CTA banner (call to action - the dark green strip) ====== */
+.cta-banner {
+    background-color: #3d6126;
+    color: #ffffff;
+    text-align: center;
+    padding: 64px 32px;
+}
+
+.cta-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-banner p {
+    margin-bottom: 28px;
+    font-size: 1rem;
+}
+
+
+/* ====== footer ====== */
+footer {
+    background-color: #548235;
+    color: #ffffff;
+    padding: 52px 64px 28px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.footer-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    font-size: 0.87rem;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+}
+
+.footer-col a,
+.footer-col p {
+    display: block;
+    font-size: 0.88rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+    color: #e8f0e0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #6ba142;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+
+/*
+   ===============================
+   MOBILE STYLES
+   anything below 768px wide (phones + smaller tablets)
+   ===============================
+*/
+@media (max-width: 768px) {
+
+    /* the nav turns into a hamburger menu */
+    nav {
+        padding: 0 16px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* hide the links by default, only show when toggled */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 16px;
+        border-bottom: 1px solid #d4e2c6;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    /* shrink the banners */
+    .page-hero {
+        padding: 40px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* less padding on all sections */
+    .section,
+    .section-green,
+    .cta-banner {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* stack all the grids into one column */
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-sidebar {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* same for form rows */
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        padding: 24px;
+    }
+
+    /* footer stacks too */
+    footer {
+        padding: 40px 24px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .footer-logo-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* extra tweaks for really tiny screens like older iPhones */
+@media (max-width: 480px) {
+
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+    }
+}

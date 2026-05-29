@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent a Dog - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rent.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html" class="active">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>Rent a Therapy Dog</h1>
+  <p>Bring comfort and companionship into your home for a week</p>
+</section>
+
+
+<!-- intro text explaining what the service is -->
+<section class="section">
+  <div class="service-info">
+    <h2>How It Works</h2>
+    <p>Our Rent a Dog service lets you welcome one of our trained therapy dogs into your home for a full week. It's a wonderful way to experience the comfort of a dog companion, especially if you're going through a hard time, supporting your mental health, or thinking about future pet ownership.</p>
+    <p>Each rental includes everything you need: food, supplies, a quick orientation, and 24/7 support from our team. Once your application is reviewed and approved, we'll match you with a dog whose temperament fits your needs.</p>
+  </div>
+</section>
+
+
+<!-- the dogs - this grid is filled in by dogs.js -->
+<section class="section-green">
+  <h2 class="section-title">Our Available Dogs</h2>
+  <p class="section-subtitle">Meet the wonderful therapy dogs in our care</p>
+
+  <!-- empty grid - dog cards get added by JS when the page loads -->
+  <div class="grid-3" id="dogsGrid"></div>
+</section>
+
+
+<!-- application form -->
+<section class="section">
+  <h2 class="section-title">Application Form</h2>
+  <p class="section-subtitle">Tell us a bit about yourself and we'll be in touch</p>
+
+  <div class="form-box">
+
+    <label class="form-label">Select a Dog</label>
+    <!-- this dropdown is filled by dogs.js too -->
+    <select id="rentDog"></select>
+    <div class="error-text" id="errorDog">Please select a dog.</div>
+
+    <label class="form-label">Full Name</label>
+    <input type="text" id="rentName" placeholder="Your full name">
+    <div class="error-text" id="errorName">Please enter your name.</div>
+
+    <label class="form-label">Email Address</label>
+    <input type="email" id="rentEmail" placeholder="your@email.com">
+    <div class="error-text" id="errorEmail">Please enter a valid email address.</div>
+
+    <label class="form-label">Tell Us About Your Situation</label>
+    <textarea id="rentSituation" placeholder="Please describe your situation, what you're hoping to get from the rental, and any relevant background..."></textarea>
+    <div class="error-text" id="errorSituation">Please describe your situation (at least 20 characters).</div>
+
+    <button class="submit-btn" onclick="submitRentForm()">Submit Application</button>
+
+    <div class="success-message" id="rentSuccess">
+      ✅ Your application has been submitted! We'll review it and get back to you within 1-2 business days.
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<!-- scripts -->
+<script src="nav.js"></script>
+<script src="dogs.js"></script>
+<script src="rent.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

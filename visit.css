@@ -1,0 +1,78 @@
+/* visit.css - just for the visit the team page */
+
+
+/* left side - the text info about the office */
+.facility-text h2 {
+    font-size: 1.9rem;
+    color: #548235;
+    margin-bottom: 16px;
+}
+
+.facility-text p {
+    color: #555555;
+    margin-bottom: 14px;
+    line-height: 1.75;
+    font-size: 0.94rem;
+}
+
+
+/* each row of info (icon + text) */
+.info-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+/* small circle icon */
+.info-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #e8f0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #548235;
+}
+
+.info-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2c2c2c;
+    margin-bottom: 2px;
+}
+
+.info-item span {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+
+/* right side - the office photo */
+.facility-photo img {
+    border-radius: 12px;
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* on mobile the photo gets shorter so it doesnt take over the screen */
+@media (max-width: 768px) {
+
+    .facility-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .facility-photo img {
+        height: 240px;
+    }
+}

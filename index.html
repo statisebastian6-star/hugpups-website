@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HugPups - Comfort Through Companionship</title>
+
+  <!-- google fonts: Playfair for headings, Nunito for everything else -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- shared site styles + this page only -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+<!-- top bar nav -->
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<!-- big hero with the dog photo behind -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Comfort through<br>companionship</h1>
+    <p>Professional therapy dogs bringing emotional support and joy to your life.</p>
+    <div class="hero-btns">
+      <a href="rent.html" class="btn btn-green">Rent a Dog</a>
+      <a href="visit.html" class="btn btn-white">Book a Visit</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- welcome / about-us snippet -->
+<section class="welcome">
+  <h2>Welcome to HugPups</h2>
+  <p>At HugPups we believe in the healing power of the human-animal bond. Our certified therapy dogs and professional handlers provide emotional support, reduce stress, and bring joy to people who need it most.</p>
+  <p>Our service is not a substitute for therapy, but a meaningful addition to it. We help people dealing with anxiety and depression by providing companionship, while also giving them experience with animals so they can one day own a pet themselves.</p>
+</section>
+
+
+<!-- 3 benefits cards -->
+<section class="section-green">
+  <h2 class="section-title">Benefits of Therapy for Mental Health</h2>
+
+  <div class="grid-3">
+
+    <div class="card benefit-card">
+      <div class="icon-circle"><i data-lucide="leaf"></i></div>
+      <h3>Reduces Stress &amp; Anxiety</h3>
+      <p>Therapy dogs lower cortisol levels and help promote a sense of calm and relaxation.</p>
+    </div>
+
+    <div class="card benefit-card">
+      <div class="icon-circle"><i data-lucide="sun"></i></div>
+      <h3>Boosts Mood &amp; Happiness</h3>
+      <p>Spending time with a friendly dog raises serotonin and brings lasting joy.</p>
+    </div>
+
+    <div class="card benefit-card">
+      <div class="icon-circle"><i data-lucide="heart"></i></div>
+      <h3>Provides Emotional Support</h3>
+      <p>Therapy dogs offer unconditional companionship and improve emotional resilience.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 2 advice cards leading to other pages -->
+<section class="section">
+  <h2 class="section-title">Pet Ownership Advice</h2>
+
+  <div class="grid-2">
+
+    <div class="card advice-card">
+      <h3>Is a Therapy Dog Right for You?</h3>
+      <p>Before renting a therapy dog, think about your lifestyle, schedule and ability to care for an animal. Renting is a great way to get experience with dogs before committing to permanent ownership.</p>
+      <a href="services.html">Learn more about our services →</a>
+    </div>
+
+    <div class="card advice-card">
+      <h3>Preparing for a Pet</h3>
+      <p>If you're thinking about renting, make sure you have time, space and the right environment at home. A calm safe space helps the dog settle in and means you'll get the most out of your visit.</p>
+      <a href="rent.html">Get started with a rental →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- further reading - the brief said to link out to articles about mental health -->
+<section class="section-green">
+  <h2 class="section-title">Further Reading</h2>
+  <p class="section-subtitle">Trusted articles on pet ownership and mental health</p>
+
+  <div class="grid-2">
+
+    <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/nature-and-mental-health/how-nature-benefits-mental-health/" target="_blank" rel="noopener" class="card reading-card">
+      <h3>Nature, Animals &amp; Mental Health</h3>
+      <p>Mind UK explains how connecting with animals and nature can support your mental wellbeing.</p>
+      <span class="read-more">mind.org.uk →</span>
+    </a>
+
+    <a href="https://www.nhs.uk/mental-health/self-help/tips-and-support/" target="_blank" rel="noopener" class="card reading-card">
+      <h3>NHS Mental Health Self-Help</h3>
+      <p>Practical tips and guidance from the NHS on managing your mental health day to day.</p>
+      <span class="read-more">nhs.uk →</span>
+    </a>
+
+    <a href="https://www.bluecross.org.uk/advice/dog/wellbeing-and-care/getting-a-dog" target="_blank" rel="noopener" class="card reading-card">
+      <h3>Thinking of Getting a Dog?</h3>
+      <p>Blue Cross's guide to what to consider before bringing a dog into your home.</p>
+      <span class="read-more">bluecross.org.uk →</span>
+    </a>
+
+    <a href="https://www.rspca.org.uk/adviceandwelfare/pets/dogs" target="_blank" rel="noopener" class="card reading-card">
+      <h3>RSPCA Dog Care Guide</h3>
+      <p>Everything you need to know about caring for a dog responsibly, from the RSPCA.</p>
+      <span class="read-more">rspca.org.uk →</span>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- call to action banner near the bottom -->
+<section class="cta-banner">
+  <div class="cta-icon"><i data-lucide="phone"></i></div>
+  <h2>Ready to Get Started?</h2>
+  <p>Contact us today to learn more about our therapy dog services</p>
+  <a href="contact.html" class="btn btn-white">Contact Us</a>
+</section>
+
+
+<!-- footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<!-- scripts at the bottom so the page loads first -->
+<script src="nav.js"></script>
+<!-- lucide icons - turns all the <i data-lucide=""> tags into actual icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* rent.css - the rent a dog page */
+
+
+/* the intro paragraph block at the top */
+.service-info {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-info h2 {
+    font-size: 1.9rem;
+    color: #548235;
+    margin-bottom: 18px;
+}
+
+.service-info p {
+    color: #555555;
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+
+/* the cards for each dog (built by JS not html) */
+.dog-card {
+    overflow: hidden;
+}
+
+.dog-card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    /* object-position is set inline per dog in dogs.js */
+}
+
+/* info bit below the photo */
+.dog-info {
+    padding: 22px;
+}
+
+.dog-info h3 {
+    font-size: 1.2rem;
+    color: #548235;
+    margin-bottom: 10px;
+}
+
+.dog-meta {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.dog-meta strong {
+    color: #2c2c2c;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+    .service-info h2 {
+        font-size: 1.5rem;
+    }
+}

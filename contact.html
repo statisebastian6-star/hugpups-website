@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>Contact Us</h1>
+  <p>Got a question or some feedback? We'd love to hear from you</p>
+</section>
+
+
+<!-- info on the left, form on the right -->
+<section class="section">
+  <div class="grid-sidebar">
+
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have questions about our therapy dog services? Need more information? Want to share feedback? Drop us a message using the form and we'll reply within 24 hours.</p>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="phone"></i></div>
+        <div>
+          <strong>Phone</strong>
+          <span>(555) 123-4567<br>Mon-Fri 9am-6pm</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="mail"></i></div>
+        <div>
+          <strong>Email</strong>
+          <span>hello@hugpups.com</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="map-pin"></i></div>
+        <div>
+          <strong>Office</strong>
+          <span>42 Serenity Gardens, Suite 12<br>Chelsea, London SW3 4AU</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-box-contact">
+
+      <label class="form-label">Your Name</label>
+      <input type="text" id="contactName" placeholder="Your full name">
+      <div class="error-text" id="errorContactName">Please enter your name.</div>
+
+      <label class="form-label">Your Email Address</label>
+      <input type="email" id="contactEmail" placeholder="your@email.com">
+      <div class="error-text" id="errorContactEmail">Please enter a valid email so we can reply.</div>
+
+      <label class="form-label">Subject</label>
+      <input type="text" id="contactSubject" placeholder="What's your message about?">
+      <div class="error-text" id="errorContactSubject">Please enter a subject.</div>
+
+      <label class="form-label">Your Message</label>
+      <textarea id="contactMessage" placeholder="Type your question or feedback..."></textarea>
+      <div class="error-text" id="errorContactMessage">Please write your message (at least 10 characters).</div>
+
+      <button class="submit-btn" onclick="submitContact()">Send Message</button>
+
+      <div class="success-message" id="contactSuccess">
+        ✅ Your message has been sent! We'll get back to you within 24 hours.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FAQ accordion - clicking opens/closes each answer -->
+<section class="section-green">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How quickly can I rent a therapy dog?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">Once your application is approved, rentals can typically start within 1-3 business days. For urgent needs, contact us directly.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Are your dogs safe around children?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">Yes! All our therapy dogs are certified and have been through extensive training. Many of them specialise in working with children.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What if I have allergies?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">Let us know about your allergies in the application or contact form. Some breeds are much better than others for people with allergies.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is this a substitute for therapy?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">No - our service is meant to add to professional mental health care, not replace it. We always recommend speaking to a qualified professional too.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<script src="nav.js"></script>
+<script src="contact.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

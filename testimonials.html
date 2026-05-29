@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="testimonials.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html" class="active">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>Testimonials</h1>
+  <p>Hear from people whose lives have been touched by our therapy dogs</p>
+</section>
+
+
+<!-- the grid of comments. new ones get added at the bottom by JS -->
+<section class="section">
+  <h2 class="section-title">What Our Clients Say</h2>
+  <p class="section-subtitle">Real comments from past customers of HugPups</p>
+
+  <div class="grid-2" id="reviewsGrid">
+
+    <div class="card review-card">
+      <p>"Tofu came to stay with me during a difficult recovery period. His gentle presence and unconditional love helped me through some very dark days. I can't recommend HugPups enough."</p>
+      <div class="reviewer-name">Jennifer M.</div>
+    </div>
+
+    <div class="card review-card">
+      <p>"We visit the HugPups office monthly with our son who has anxiety. The sessions with Bella have made such a difference in his ability to cope. Thank you for this wonderful service!"</p>
+      <div class="reviewer-name">Robert T.</div>
+    </div>
+
+    <div class="card review-card">
+      <p>"Charlie brought so much joy to our elderly mother during her final months. The comfort and happiness he provided was beyond measure. The entire HugPups team showed incredible compassion."</p>
+      <div class="reviewer-name">Maria S.</div>
+    </div>
+
+    <div class="card review-card">
+      <p>"As someone who struggles with depression, spending time with Daisy has been life-changing. She seems to sense when I need extra comfort. The booking process was easy and the staff is always helpful."</p>
+      <div class="reviewer-name">David K.</div>
+    </div>
+
+    <div class="card review-card">
+      <p>"Max spent a week with us and was the perfect companion. So loving and well-behaved. The week-long rental was exactly what I needed and gave me the confidence to think about getting my own dog one day."</p>
+      <div class="reviewer-name">Lisa P.</div>
+    </div>
+
+    <div class="card review-card">
+      <p>"We brought Lucy to our office for a wellness event and the entire team fell in love. The stress relief she brought to everyone was incredible. We've already booked another visit!"</p>
+      <div class="reviewer-name">Amanda R.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- comment form - lets visitors add their own review -->
+<section class="section-green">
+  <h2 class="section-title">Leave a Comment</h2>
+  <p class="section-subtitle">Share your experience with HugPups</p>
+
+  <div class="form-box">
+
+    <label class="form-label">Your Name</label>
+    <input type="text" id="commentName" placeholder="Your name">
+    <div class="error-text" id="errorCommentName">Please enter your name.</div>
+
+    <label class="form-label">Your Comment</label>
+    <textarea id="commentText" placeholder="Tell us about your experience..."></textarea>
+    <div class="error-text" id="errorCommentText">Please write a comment (at least 10 characters).</div>
+
+    <button class="submit-btn" onclick="submitComment()">Submit Comment</button>
+
+    <div class="success-message" id="commentSuccess">
+      ✅ Thanks! Your comment has been added to the page.
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<script src="nav.js"></script>
+<script src="testimonials.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

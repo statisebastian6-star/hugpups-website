@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>Our Services</h1>
+  <p>Two ways to experience the comfort of a therapy dog</p>
+</section>
+
+
+<!-- our 2 main services side by side -->
+<section class="section">
+  <div class="grid-2">
+
+    <!-- rent a dog -->
+    <div class="card service-card">
+      <div class="svc-icon"><i data-lucide="house"></i></div>
+      <h3>Rent a Dog</h3>
+      <p>Take one of our trained therapy dogs home for a full week. Perfect if you want longer companionship and a taste of what pet ownership is like.</p>
+      <ul class="tick-list">
+        <li>One week rental period</li>
+        <li>Fully trained therapy dog</li>
+        <li>Food and supplies included</li>
+        <li>Ongoing handler support</li>
+      </ul>
+      <a href="rent.html" class="btn btn-green">Learn More &amp; Apply</a>
+    </div>
+
+    <!-- visit the team -->
+    <div class="card service-card">
+      <div class="svc-icon"><i data-lucide="building-2"></i></div>
+      <h3>Visit the Team</h3>
+      <p>Book a visit to our office to meet the team and our therapy dogs in person. A great way to get started, especially if you're new to therapy dogs.</p>
+      <ul class="tick-list">
+        <li>Choose your own timeslot</li>
+        <li>Meet multiple dogs in one visit</li>
+        <li>Friendly, calm environment</li>
+        <li>Group bookings welcome</li>
+      </ul>
+      <a href="visit.html" class="btn btn-green">Learn More &amp; Book</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- why choose us - 4 small cards -->
+<section class="section-green">
+  <h2 class="section-title">Why Choose HugPups?</h2>
+
+  <div class="grid-2">
+
+    <div class="card why-card">
+      <div class="icon-circle"><i data-lucide="graduation-cap"></i></div>
+      <div>
+        <h4>Certified &amp; Trained</h4>
+        <p>All our dogs are certified by recognised therapy dog organisations.</p>
+      </div>
+    </div>
+
+    <div class="card why-card">
+      <div class="icon-circle"><i data-lucide="shield-check"></i></div>
+      <div>
+        <h4>Health &amp; Safety First</h4>
+        <p>Regular health checks, vaccinations and grooming for every dog.</p>
+      </div>
+    </div>
+
+    <div class="card why-card">
+      <div class="icon-circle"><i data-lucide="award"></i></div>
+      <div>
+        <h4>Experienced Handlers</h4>
+        <p>Our handlers have years of professional experience and qualifications.</p>
+      </div>
+    </div>
+
+    <div class="card why-card">
+      <div class="icon-circle"><i data-lucide="hand-heart"></i></div>
+      <div>
+        <h4>Mental Health Focus</h4>
+        <p>Designed specifically to support people living with anxiety and depression.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="cta-banner">
+  <h2>Not Sure Which Service Is Right for You?</h2>
+  <p>Get in touch and we'll help you decide</p>
+  <a href="contact.html" class="btn btn-white">Contact Us</a>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<script src="nav.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

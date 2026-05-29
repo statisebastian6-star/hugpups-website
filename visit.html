@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit the Team - HugPups</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="visit.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="HugPups logo">
+    <span class="nav-logo-text">HugPups</span>
+  </div>
+  <button class="nav-toggle" onclick="flipMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="services.html">Services</a>
+    <a href="rent.html">Rent a Dog</a>
+    <a href="visit.html" class="active">Visit the Team</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms and conditions</a>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <h1>Visit the Team</h1>
+  <p>Come meet our therapy dogs in person at our welcoming office</p>
+</section>
+
+
+<!-- info about the office - text on left, photo on right -->
+<section class="section">
+  <div class="grid-sidebar">
+
+    <!-- left side - all the practical info -->
+    <div class="facility-text">
+      <h2>About Our Office</h2>
+      <p>Our office is a peaceful, accessible space designed with comfort in mind. Visit us to meet our therapy dogs and the team who looks after them. It's the perfect first step before applying to rent a dog, or just a relaxing visit on its own.</p>
+      <p>Sessions usually last 30-60 minutes. Whether you're coming alone or with friends or family, our handlers will guide your visit and make sure everyone feels welcome.</p>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="map-pin"></i></div>
+        <div>
+          <strong>Location</strong>
+          <span>42 Serenity Gardens, Suite 12<br>Chelsea, London SW3 4AU</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="clock"></i></div>
+        <div>
+          <strong>Opening Hours</strong>
+          <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM<br>Sun: Closed</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="phone"></i></div>
+        <div>
+          <strong>Phone</strong>
+          <span>(555) 123-4567</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i data-lucide="mail"></i></div>
+        <div>
+          <strong>Email</strong>
+          <span>visit@hugpups.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- right side - office photo -->
+    <div class="facility-photo">
+      <img src="assets/office.jpg" alt="HugPups office">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- booking form -->
+<section class="section-green">
+  <h2 class="section-title">Book Your Visit</h2>
+  <p class="section-subtitle">Schedule a visit to meet the team and our therapy dogs</p>
+
+  <div class="form-box">
+
+    <label class="form-label">Full Name</label>
+    <input type="text" id="visitName" placeholder="Your full name">
+    <div class="error-text" id="errorVisitName">Please enter your name.</div>
+
+    <label class="form-label">Email Address</label>
+    <input type="email" id="visitEmail" placeholder="your@email.com">
+    <div class="error-text" id="errorVisitEmail">Please enter a valid email address.</div>
+
+    <label class="form-label">Number of People</label>
+    <input type="number" id="visitPeople" min="1" max="20" placeholder="How many people will visit?">
+    <div class="error-text" id="errorVisitPeople">Please enter a number between 1 and 20.</div>
+
+    <label class="form-label">Visit Date</label>
+    <input type="date" id="visitDate">
+    <div class="error-text" id="errorVisitDate">Please choose a future date.</div>
+
+    <label class="form-label">Timeslot</label>
+    <select id="visitTimeslot">
+      <option value="">Select a timeslot...</option>
+      <option>9:00 AM - 10:00 AM</option>
+      <option>10:30 AM - 11:30 AM</option>
+      <option>12:00 PM - 1:00 PM</option>
+      <option>2:00 PM - 3:00 PM</option>
+      <option>3:30 PM - 4:30 PM</option>
+      <option>5:00 PM - 6:00 PM</option>
+    </select>
+    <div class="error-text" id="errorVisitTimeslot">Please select a timeslot.</div>
+
+    <label class="form-label">Special Support Needed (optional)</label>
+    <textarea id="visitSupport" placeholder="Let us know about any accessibility needs, allergies, or special requirements..."></textarea>
+
+    <button class="submit-btn" onclick="submitVisitForm()">Book Visit</button>
+
+    <div class="success-message" id="visitSuccess">
+      ✅ Your visit is booked! We'll send a confirmation email shortly with all the details.
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="HugPups" class="footer-logo-img">
+      <div class="footer-brand-name">HugPups</div>
+      <p>Bringing comfort and companionship through therapy dogs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="rent.html">Rent a Dog</a>
+      <a href="visit.html">Visit the Team</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: hello@hugpups.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Hours: Mon-Fri 9am-6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HugPups. All rights reserved.</div>
+</footer>
+
+
+<script src="nav.js"></script>
+<script src="visit.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>
