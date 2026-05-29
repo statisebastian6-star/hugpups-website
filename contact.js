@@ -1,8 +1,8 @@
 // contact.js
-// contact form + the FAQ accordion at the bottom
+// the contact form + the FAQ accordion at the bottom
 
 
-// same email check as the other pages
+// same email checker as the other pages
 function validEmail(e) {
     var at = e.indexOf("@");
     var dot = e.lastIndexOf(".");
@@ -28,10 +28,11 @@ function submitContact() {
     clearContactErrors();
 
     // get the values
-    var name = document.getElementById("contactName").value;
-    var email = document.getElementById("contactEmail").value;
-    var subject = document.getElementById("contactSubject").value;
-    var msg = document.getElementById("contactMessage").value;
+    // .trim() so spaces dont count as actual input
+    var name = document.getElementById("contactName").value.trim();
+    var email = document.getElementById("contactEmail").value.trim();
+    var subject = document.getElementById("contactSubject").value.trim();
+    var msg = document.getElementById("contactMessage").value.trim();
 
     var fail = false;
 
@@ -53,7 +54,7 @@ function submitContact() {
         fail = true;
     }
 
-    // need a proper message not just "hi"
+    // message must be a proper message not just "hi"
     if (msg.length < 10) {
         document.getElementById("errorContactMessage").className = "error-text show";
         document.getElementById("contactMessage").className = "input-error";
@@ -80,7 +81,7 @@ function submitContact() {
 // opens or closes a FAQ when you click the question
 function toggleFaq(question) {
 
-    // the answer is the next element after the question button
+    // the answer is the element right after the question button
     var answer = question.nextElementSibling;
 
     // if its showing, hide it. if its hidden, show it

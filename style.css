@@ -1,20 +1,20 @@
 /*
    style.css
-   shared styles - used by every page
+   shared styles used on every page
 
    colour palette i picked from the brand colour #548235:
-   - main green   #548235  buttons, banners, footer
-   - hover green  #6ba142  lighter for hover effects
-   - dark green   #3d6126  used in the CTA section
-   - bg green     #e8f0e0  light tint for some sections
-   - border       #d4e2c6  for card borders + input borders
-   - text dark    #2c2c2c  headings
-   - text grey    #555555  paragraphs
-   - text light   #888888  small labels
+   - main green   #548235   buttons, banners, footer
+   - hover green  #6ba142   lighter for hover effects
+   - dark green   #3d6126   for the CTA section
+   - bg green     #e8f0e0   light tint for some sections
+   - border       #d4e2c6   card + input borders
+   - text dark    #2c2c2c   headings
+   - text grey    #555555   paragraphs
+   - text light   #888888   small labels
 */
 
 
-/* reset - get rid of all default browser spacing */
+/* reset - kill default browser spacing */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ body {
     line-height: 1.6;
 }
 
-/* all the headings use Playfair Display for a fancier feel */
+/* all headings use Playfair Display for a fancier feel */
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     line-height: 1.25;
@@ -45,7 +45,7 @@ img {
 }
 
 
-/* ====== top bar / navigation ====== */
+/* ======== top nav bar ======== */
 nav {
     background-color: #ffffff;
     border-bottom: 1px solid #d4e2c6;
@@ -63,7 +63,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: auto; /* pushes the links to the right */
+    margin-right: auto; /* pushes links to the right */
 }
 
 .nav-logo img {
@@ -103,7 +103,7 @@ nav {
     color: #ffffff;
 }
 
-/* burger button - only shows on mobile */
+/* burger button - hidden on desktop, shown on mobile */
 .nav-toggle {
     display: none;
     background: none;
@@ -115,7 +115,7 @@ nav {
 }
 
 
-/* ====== green page banner (the top of every inner page) ====== */
+/* ======== green page banner (top of every inner page) ======== */
 .page-hero {
     background-color: #548235;
     color: #ffffff;
@@ -133,7 +133,7 @@ nav {
 }
 
 
-/* ====== buttons ====== */
+/* ======== buttons ======== */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -156,7 +156,7 @@ nav {
     border-color: #6ba142;
 }
 
-/* outline button for the green banners */
+/* outline button (for the green banners) */
 .btn-white {
     background-color: transparent;
     color: #ffffff;
@@ -168,12 +168,12 @@ nav {
 }
 
 
-/* ====== sections ====== */
+/* ======== sections ======== */
 .section {
     padding: 60px 32px;
 }
 
-/* same as .section but with a green tinted background */
+/* same as .section but with the green tint */
 .section-green {
     padding: 60px 32px;
     background-color: #e8f0e0;
@@ -197,7 +197,7 @@ nav {
 }
 
 
-/* ====== card (a white box with rounded corners + shadow) ====== */
+/* ======== card - white box with rounded corners ======== */
 .card {
     background-color: #ffffff;
     border: 1px solid #d4e2c6;
@@ -206,8 +206,8 @@ nav {
 }
 
 
-/* ====== icon circles ====== */
-/* small green circle with a lucide icon inside - reused everywhere */
+/* ======== icon circles (used everywhere) ======== */
+/* small green circle with a lucide icon inside */
 .icon-circle {
     width: 48px;
     height: 48px;
@@ -227,8 +227,8 @@ nav {
 }
 
 
-/* ====== grid layouts ====== */
-/* using css grid which is super handy for cards in columns */
+/* ======== grid layouts ======== */
+/* using css grid which is way easier than floats */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,7 +253,7 @@ nav {
     margin: 0 auto;
 }
 
-/* like grid-2 but the right side is a tiny bit bigger */
+/* like grid-2 but the right side is a bit bigger */
 .grid-sidebar {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -264,7 +264,7 @@ nav {
 }
 
 
-/* ====== forms ====== */
+/* ======== forms ======== */
 .form-box {
     background-color: #ffffff;
     border-radius: 12px;
@@ -283,7 +283,7 @@ nav {
     margin-top: 18px;
 }
 
-/* every input/select/textarea gets the same look */
+/* every input/select/textarea looks the same */
 input,
 select,
 textarea {
@@ -316,13 +316,13 @@ textarea {
     gap: 16px;
 }
 
-/* turns the border red when the user messes up */
+/* turns the border red when input is wrong */
 .input-error {
     border-color: #d9534f;
     background-color: #fdf2f2;
 }
 
-/* the little red text under a broken field */
+/* little red text under broken fields */
 .error-text {
     color: #d9534f;
     font-size: 0.8rem;
@@ -333,7 +333,7 @@ textarea {
     display: block;
 }
 
-/* big green submit button at the end of forms */
+/* big green submit button */
 .submit-btn {
     background-color: #548235;
     color: #ffffff;
@@ -351,7 +351,7 @@ textarea {
     background-color: #6ba142;
 }
 
-/* green confirmation box - hidden until they actually submit */
+/* green sucess message - hidden until they actually submit */
 .success-message {
     display: none;
     background-color: #e8f0e0;
@@ -365,7 +365,7 @@ textarea {
 }
 
 
-/* ====== CTA banner (call to action - the dark green strip) ====== */
+/* ======== CTA banner (dark green strip near the bottom) ======== */
 .cta-banner {
     background-color: #3d6126;
     color: #ffffff;
@@ -384,7 +384,7 @@ textarea {
 }
 
 
-/* ====== footer ====== */
+/* ======== footer ======== */
 footer {
     background-color: #548235;
     color: #ffffff;
@@ -450,14 +450,14 @@ footer {
 
 
 /*
-   ===============================
-   MOBILE STYLES
-   anything below 768px wide (phones + smaller tablets)
-   ===============================
+   =================================
+   MOBILE STUFF
+   stuff that only kicks in below 768px (phones + small tablets)
+   =================================
 */
 @media (max-width: 768px) {
 
-    /* the nav turns into a hamburger menu */
+    /* nav turns into a burger menu */
     nav {
         padding: 0 16px;
     }
@@ -490,7 +490,7 @@ footer {
         border-radius: 8px;
     }
 
-    /* shrink the banners */
+    /* shrink the banners on mobile */
     .page-hero {
         padding: 40px 20px;
     }
@@ -519,7 +519,7 @@ footer {
         gap: 16px;
     }
 
-    /* same for form rows */
+    /* same with form rows */
     .field-row {
         grid-template-columns: 1fr;
     }
@@ -546,7 +546,7 @@ footer {
 }
 
 
-/* extra tweaks for really tiny screens like older iPhones */
+/* tiny screens like older iphones */
 @media (max-width: 480px) {
 
     .page-hero h1 {

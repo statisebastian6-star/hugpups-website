@@ -1,7 +1,7 @@
 /* terms.css - terms and conditions page */
 
 
-/* main content area - narrow column so its readable */
+/* main content area - kept narrow so its easier to read */
 .terms-body {
     max-width: 820px;
     margin: 0 auto;
@@ -46,7 +46,7 @@
 }
 
 
-/* the green contact box at the bottom */
+/* green contact box at the bottom */
 .terms-contact-box {
     background-color: #e8f0e0;
     border-radius: 12px;

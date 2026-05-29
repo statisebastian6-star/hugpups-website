@@ -1,15 +1,10 @@
 // testimonials.js
-// lets people leave a comment + saves them on the browser
-// using localStorage so they dont vanish on refresh
+// people can leave a comment and it gets saved
+// uses localStorage so comments stay after refresh
+// (theres no backend so this was the only way)
 
 
-// when the page loads we want to bring back any old comments
-window.onload = function() {
-    loadSavedComments();
-};
-
-
-// reads any saved comments from localStorage and puts them back on the page
+// reads any saved comments and puts them back on the page
 function loadSavedComments() {
 
     // grab whats saved (if anything)
@@ -20,7 +15,7 @@ function loadSavedComments() {
         return;
     }
 
-    // localStorage only stores text so we saved it as JSON
+    // localStorage only saves text so we saved it as JSON
     // JSON.parse turns the text back into a real array
     var list = JSON.parse(saved);
 
@@ -52,9 +47,9 @@ function submitComment() {
 
     clearCommentErrors();
 
-    // grab the inputs
-    var who = document.getElementById("commentName").value;
-    var what = document.getElementById("commentText").value;
+    // grab the inputs - trim removes spaces from start and end
+    var who = document.getElementById("commentName").value.trim();
+    var what = document.getElementById("commentText").value.trim();
 
     var broken = false;
 
@@ -77,9 +72,9 @@ function submitComment() {
     }
 
 
-    // === save it to localStorage so it stays forever ===
+    // save it to localStorage so it stays forever
 
-    // step 1: get whats already saved
+    // get whats already saved
     var saved = localStorage.getItem("hugpupsComments");
 
     var list = [];
@@ -89,18 +84,18 @@ function submitComment() {
         list = JSON.parse(saved);
     }
 
-    // step 2: add the new comment to the array
+    // add the new comment to the array
     list.push({
         name: who,
         text: what
     });
 
-    // step 3: save the updated array back
+    // save the updated array back
     // JSON.stringify turns the array into text so it can be saved
     localStorage.setItem("hugpupsComments", JSON.stringify(list));
 
 
-    // === now add the card to the page ===
+    // now add the card to the page right away
 
     var newOne = "<div class='card review-card'>";
     newOne += "<p>\"" + what + "\"</p>";
@@ -120,3 +115,7 @@ function submitComment() {
     // scroll up to the grid so they can see their new comment
     grid.scrollIntoView({ behavior: "smooth" });
 }
+
+
+// loadSavedComments gets called from nav.js when the page loads
+// (one shared window.onload across the site so they dont overwrite eachother)

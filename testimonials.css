@@ -10,12 +10,12 @@
     font-size: 0.95rem;
     color: #555555;
     line-height: 1.7;
-    /* italic + quote marks (in the html) makes it feel like a real quote */
+    /* italic + quote marks (added in the html) makes it look like a real quote */
     font-style: italic;
     margin-bottom: 18px;
 }
 
-/* name shown at the bottom of each review */
+/* name at the bottom of each review */
 .reviewer-name {
     font-weight: 700;
     font-size: 0.95rem;

@@ -1,4 +1,4 @@
-/* contact.css - styles for the contact page (and its FAQ) */
+/* contact.css - styles for the contact page + the FAQ */
 
 
 /* left column - get in touch info */
@@ -53,7 +53,7 @@
 }
 
 
-/* the form box on the right of the contact info */
+/* form box on the right */
 .form-box-contact {
     background-color: #ffffff;
     border-radius: 12px;
@@ -65,7 +65,7 @@
 
 /*
    FAQ accordion stuff
-   each question is a button that toggles its answer
+   each question is a button that opens its answer when clicked
 */
 .faq-list {
     max-width: 860px;
@@ -101,13 +101,13 @@
     background-color: #f7faf3;
 }
 
-/* the little down arrow */
+/* down arrow */
 .faq-arrow {
     font-size: 0.8rem;
     color: #548235;
 }
 
-/* answer is hidden by default, JS toggles display:block */
+/* answer is hidden by default, JS toggles display:block when clicked */
 .faq-answer {
     display: none;
     padding: 0 24px 20px 24px;

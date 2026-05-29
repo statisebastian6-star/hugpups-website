@@ -1,9 +1,9 @@
 // rent.js
-// handles the application form on the rent a dog page
+// validates the application form on rent.html
 
 
 // quick check if an email looks ok
-// must have @ and a dot after the @
+// it needs an @ and a dot somewhere after the @
 function emailOk(text) {
 
     var at = text.indexOf("@");
@@ -25,7 +25,7 @@ function emailOk(text) {
 }
 
 
-// hide all the red error stuff (used when retrying)
+// hides all the red error stuff (when they try again)
 function resetErrors() {
     document.getElementById("errorDog").className = "error-text";
     document.getElementById("errorName").className = "error-text";
@@ -39,23 +39,25 @@ function resetErrors() {
 }
 
 
-// show one error - saves me writing the same code 4 times
+// shows one error - saves repeating the same 2 lines
 function flagError(fieldId, errorId) {
     document.getElementById(errorId).className = "error-text show";
     document.getElementById(fieldId).className = "input-error";
 }
 
 
-// runs when the user hits submit
+// runs when they hit submit
 function submitRentForm() {
 
     resetErrors();
 
     // grab whats in the fields
-    var dog = document.getElementById("rentDog").value;
-    var name = document.getElementById("rentName").value;
-    var email = document.getElementById("rentEmail").value;
-    var situation = document.getElementById("rentSituation").value;
+    // .trim() removes spaces from the start and end
+    // so people cant cheat by typing only spaces
+    var dog = document.getElementById("rentDog").value.trim();
+    var name = document.getElementById("rentName").value.trim();
+    var email = document.getElementById("rentEmail").value.trim();
+    var situation = document.getElementById("rentSituation").value.trim();
 
     // track if anything is wrong
     var problem = false;
@@ -78,7 +80,7 @@ function submitRentForm() {
         problem = true;
     }
 
-    // situation must be a real description not just a word or 2
+    // situation must be a proper description not just a word or 2
     if (situation.length < 20) {
         flagError("rentSituation", "errorSituation");
         problem = true;

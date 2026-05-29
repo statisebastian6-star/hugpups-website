@@ -1,7 +1,7 @@
 /* rent.css - the rent a dog page */
 
 
-/* the intro paragraph block at the top */
+/* intro paragraph block at the top */
 .service-info {
     max-width: 760px;
     margin: 0 auto;
@@ -21,7 +21,7 @@
 }
 
 
-/* the cards for each dog (built by JS not html) */
+/* dog cards (these are built by JS not html) */
 .dog-card {
     overflow: hidden;
 }
@@ -31,10 +31,10 @@
     width: 100%;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
-    /* object-position is set inline per dog in dogs.js */
+    /* object-position is set per dog in dogs.js (some dogs need diff crops) */
 }
 
-/* info bit below the photo */
+/* info part under the photo */
 .dog-info {
     padding: 22px;
 }

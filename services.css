@@ -1,12 +1,12 @@
-/* services.css - styles only used on the services page */
+/* services.css - just for the services page */
 
 
-/* two big service cards */
+/* the 2 big service cards */
 .service-card {
     padding: 36px;
 }
 
-/* bigger icon for the main services (vs the smaller icon-circle elsewhere) */
+/* bigger icon for the main services (smaller circles elsewhere) */
 .svc-icon {
     width: 56px;
     height: 56px;
@@ -53,7 +53,7 @@
     position: relative;
 }
 
-/* the green tick before each list item */
+/* green tick before each list item */
 .tick-list li::before {
     content: '\2713';  /* unicode check mark */
     color: #548235;
@@ -63,7 +63,7 @@
 }
 
 
-/* "why choose us" cards lower down */
+/* why choose us cards (further down the page) */
 .why-card {
     padding: 28px;
     display: flex;

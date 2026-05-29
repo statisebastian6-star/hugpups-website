@@ -1,10 +1,11 @@
 // dogs.js
-// all the dogs we have available at hugpups
-// the brief said dont hardcode in html so its all in here
+// all the therapy dogs and the code to put them on the page
+// the brief said dont put dogs in html so its all in here
 
 
-// each dog is an object with the info we need
-// image_position lets me crop the photo nicely for each one
+// each dog is an object with the info we need to show
+// image_position lets me crop the photo nicely per dog
+// (some dogs have their face at the top so they need different cropping)
 var dogs = [
     {
         name: "Tofu",
@@ -57,28 +58,28 @@ var dogs = [
 ];
 
 
-// build the dog cards and put them in the page
+// puts the dog cards on the rent page
 function showDogs() {
 
     // find where the cards should go
     var box = document.getElementById("dogsGrid");
 
-    // if were not on the rent page just stop
+    // if its not the rent page, do nothing
     if (box == null) {
         return;
     }
 
-    // start with nothing inside
+    // start with empty grid
     box.innerHTML = "";
 
-    // go through each dog one by one
+    // go through every dog
     var i = 0;
     while (i < dogs.length) {
 
         var d = dogs[i];
 
         // build the card as one big string
-        // i found this easier than making each element in js
+        // i tried doing this with createElement first but this is way easier
         var html = "<div class='card dog-card'>";
         html += "<img src='" + d.image_url + "' alt='" + d.name + "' style='object-position: " + d.image_position + ";'>";
         html += "<div class='dog-info'>";
@@ -97,17 +98,17 @@ function showDogs() {
 }
 
 
-// fill the dropdown on the rental form with each dogs name
+// fills the dropdown on the rental form with each dogs name
 function fillDogDropdown() {
 
     var pick = document.getElementById("rentDog");
 
-    // not all pages have this
+    // not all pages have this dropdown
     if (pick == null) {
         return;
     }
 
-    // first option is blank
+    // first option is empty (so we can check if they picked one)
     var menu = "<option value=''>Choose a dog...</option>";
 
     // add an option for each dog
@@ -119,8 +120,5 @@ function fillDogDropdown() {
 }
 
 
-// run both when the page is ready
-window.onload = function() {
-    showDogs();
-    fillDogDropdown();
-};
+// these get called from nav.js when the page loads
+// (one shared window.onload across the site so they dont overwrite eachother)
